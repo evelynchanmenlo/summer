@@ -1,1 +1,39 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="theme-color" content="#0f0f0f" />
+  <title>Stream</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" href="icon-192.svg" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <header id="header">
+      <span id="header-title">stream</span>
+      <div id="header-actions">
+        <button id="digest-btn" title="Daily Digest">✦ digest</button>
+      </div>
+    </header>
+    <div id="compose-area">
+      <textarea id="compose" placeholder="what's on your mind..." rows="1" autocomplete="off" autocorrect="on" spellcheck="true"></textarea>
+      <div id="tag-preview"></div>
+    </div>
+    <div id="timeline"></div>
+    <div id="digest-modal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <span class="modal-title">✦ today's digest</span>
+          <button class="modal-close" id="close-digest">✕</button>
+        </div>
+        <div id="digest-body"></div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
